@@ -1,0 +1,129 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.background {
+  position: absolute;
+  opacity: 0.1;
+  width: 100%;
+  max-width: 500px;
+  margin: 50px;
+  z-index: -1;
+}
+
+.container {
+  margin: 8px 16px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 2.75em;
+}
+
+.right-title {
+  margin-left: auto;
+  font-size: 2.75em;
+}
+
+.submit {
+  margin-top: 8px;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-item:hover .inner-links {
+  display: block;
+  margin-top: -1px;
+}
+
+.nav-link {
+  display: block;
+  padding: 4px;
+  border-left: 12px solid #711515;
+  margin-bottom: 1px;
+  background: #b50f33;
+  color: #fff;
+  text-decoration: none;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.nav-link:hover {
+  background: #711515;
+}
+
+.inner-links {
+  display: none;
+  padding-left: 12px;
+}
+
+.inner-link {
+  background: #ed9f9f;
+  color: #711515;
+  border-bottom: 1px solid #711515;
+  margin-bottom: 0;
+}
+
+.inner-link:hover {
+  color: #fff;
+  background-color: #711515;
+}
+
+.left-side {
+  flex: 0 1 300px;
+}
+
+.center-side {
+  flex: 1 1 600px;
+}
+
+.article {
+  margin: 0 16px;
+}
+
+.article-title {
+  text-align: right;
+  margin: 0;
+}
+
+.right-side {
+  flex: 0 1 400px;
+  border-left: 1px solid #999;
+  padding-left: 10px;
+}
+
+.aside-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.aside-text {
+  background: rgba(20, 20, 20, 0.1);
+  padding: 8px;
+}
+
+.footer {
+  margin-top: 16px;
+  text-align: center;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    display: block;
+  }
+}

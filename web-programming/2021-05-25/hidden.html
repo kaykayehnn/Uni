@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hidden</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+
+      .first {
+        background: turquoise;
+      }
+
+      .second {
+        background: magenta;
+      }
+
+      #button {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button">Hide</button>
+    <div class="first"></div>
+    <div class="second"></div>
+    <script>
+      document.getElementById("button").addEventListener("click", (e) => {
+        var first = document.querySelector(".first");
+        var second = document.querySelector(".second");
+
+        if (!first.hidden && !second.hidden) {
+          first.hidden = true;
+          second.hidden = true;
+        } else if (first.hidden && second.hidden) {
+          first.hidden = false;
+        } else if (second.hidden) {
+          first.hidden = true;
+          second.hidden = false;
+        } else if (first.hidden) {
+          second.hidden = false;
+          first.hidden = false;
+        }
+      });
+    </script>
+  </body>
+</html>

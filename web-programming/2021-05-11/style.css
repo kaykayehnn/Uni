@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+}
+
+.gray {
+  background: #c9cec8;
+}
+
+.light-blue {
+  background: #95b1f8;
+}
+
+.pink {
+  background: #fd73e8;
+}
+
+.profile-photo {
+  float: left;
+  width: 300px;
+  margin-right: 12px;
+}
+
+.grades-table {
+  border-collapse: collapse;
+}
+
+.grades-table th,
+.grades-table td {
+  border: 1px solid black;
+}
+
+.grades-table td {
+  text-align: center;
+}
+
+/* Repeated twice to increase priority */
+.left-aligned.left-aligned {
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin: 16px 0 8px;
+}
+
+.flex-form {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  /* margin: auto; */
+  margin: 0 12px;
+}
+
+.submit-button {
+  display: block;
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: -8px;
+  transform: translateX(50%);
+  font-size: 1.1em;
+}

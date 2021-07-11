@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <title>Simple Form</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="blue">Enter the system</h1>
+      <p>It is necessary to login in Your account in order tosn in for a course</p>
+
+      <div class="flex">
+        <form class="column" action="#register">
+          <h2 class="subtitle">Are you new? <span class="blue">Register</span></h2>
+          <input class="input" type="text" name="username" id="username" placeholder="User name" required />
+          <input class="input" type="email" name="email" id="email" placeholder="Email" required />
+          <input class="input" type="password" name="password" id="password" placeholder="Password" required />
+          <input class="input" type="password" name="confirm" id="confirm" placeholder="Confirm Password" required />
+          <input class="form-submit-button register-button" type="submit" value="Register" />
+        </form>
+        <form class="column blue-form" action="#login">
+          <h2 class="subtitle">Already a student? Login</h2>
+          <input class="input" type="text" name="username" id="username" placeholder="User name" required />
+          <input class="input" type="password" name="password" id="password" placeholder="Password" required />
+          <input type="checkbox" name="remember" id="remember" />
+          <label for="remember">Remember me?</label>
+          <input class="form-submit-button login-button" type="submit" value="Login" />
+          <a class="forgot-password" href="#forgot">Forgot Password</a>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

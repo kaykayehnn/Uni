@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        padding: 20px;
+      }
+
+      label {
+        display: block;
+      }
+
+      .flex {
+        display: flex;
+        border: 1px solid black;
+        justify-content: center;
+      }
+      input,
+      textarea {
+        margin: 8px 0;
+      }
+      img {
+        margin: auto 0;
+        height: 360px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Час при лекар</h3>
+    <div class="flex">
+      <form action="#" method="POST">
+        <div>
+          <label for="name">Име</label>
+          <input type="text" id="name" name="name" placeholder="Име на пациента" />
+        </div>
+        <div>
+          <label for="surname">Фамилия</label>
+          <input type="text" id="surname" name="surname" placeholder="Фамилия на пациента" />
+        </div>
+        <div>
+          <label for="egn">ЕГН</label>
+          <input type="text" id="egn" name="egn" placeholder="ЕГН на пациента" />
+        </div>
+        <div>
+          <label for="datetime">Дата и час</label>
+          <input type="date" id="datetime" name="datetime" />
+        </div>
+        <div>
+          <label for="symptoms">Оплаквания</label>
+          <textarea id="symptoms" name="symptoms"></textarea>
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+      </form>
+      <img src="./images/doctor.jpg" alt="Doctor" />
+    </div>
+  </body>
+</html>

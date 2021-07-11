@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Tables</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+
+      .button {
+        text-align: left;
+        width: 200px;
+        font-size: 2em;
+      }
+
+      .no-style-link {
+        all: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><img src="./images/logo.png" alt="Logo" /></td>
+        <td class="cell">
+          <table>
+            <tr>
+              <td>
+                <button class="button">
+                  <a class="no-style-link" href="https://uni-plovdiv.bg/">Plovdiv</a>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="button">
+                  <a class="no-style-link" href="https://uni-plovdiv.bg/">University</a>
+                </button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

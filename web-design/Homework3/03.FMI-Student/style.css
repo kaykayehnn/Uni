@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.student {
+  --size: 400px;
+  --eye-size: calc(var(--size) / 5);
+  --eye-top: calc(var(--size) / 5);
+  --eye-distance: calc(var(--size) / 5);
+  --pupil-size: calc(var(--eye-size) / 3);
+  --nose-size: calc(var(--size) / 6);
+  --nose-top: calc(var(--size) / 2 - var(--nose-size) / 2);
+  --mouth-width: calc(var(--size) / 1.8);
+  --mouth-height: calc(var(--size) / 4.5);
+  --mouse-top: calc(var(--nose-top) + var(--nose-size) + var(--size) * 0.05);
+  --teeth-size: calc(var(--mouth-width) / 5);
+  --teeth-radius: calc(var(--teeth-size) / 6);
+  --border-size: 2px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  margin: 0 auto;
+  background: #ffff00;
+  border: var(--border-size) solid black;
+  border-radius: var(--size);
+}
+
+.eye {
+  position: absolute;
+  top: var(--eye-top);
+  width: var(--eye-size);
+  height: var(--eye-size);
+  border-radius: var(--eye-size);
+  border: var(--border-size) solid black;
+  background: #ffffff;
+}
+
+/* Pupils */
+.eye::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--pupil-size);
+  height: var(--pupil-size);
+  border-radius: var(--pupil-size);
+  background: #000000;
+}
+
+.left-eye {
+  left: var(--eye-distance);
+}
+
+.left-eye::after {
+  top: calc(var(--eye-size) * 0.45);
+  left: calc(var(--eye-size) * 0.45);
+}
+
+.right-eye {
+  right: var(--eye-distance);
+}
+
+.right-eye::after {
+  top: 0;
+  left: 0;
+}
+
+.nose {
+  position: absolute;
+  top: var(--nose-top);
+  left: calc(var(--size) / 2 - var(--nose-size) / 2);
+  width: var(--nose-size);
+  height: var(--nose-size);
+  border: var(--border-size) solid black;
+  border-radius: var(--nose-size);
+  background: #ff0000;
+}
+
+.mouth {
+  position: absolute;
+  top: var(--mouse-top);
+  left: calc(var(--size) / 2 - var(--mouth-width) / 2);
+  height: var(--mouth-height);
+  width: var(--mouth-width);
+  background: #ffffff;
+  border: var(--border-size) solid black;
+  border-radius: var(--size);
+}
+
+.mouth::before,
+.mouth::after {
+  content: "";
+  display: block;
+  position: absolute;
+  /* This negative top positioning is used to align the top border of the teeth
+     with the top border of the mouth. */
+  top: calc(0px - var(--border-size));
+  width: var(--teeth-size);
+  height: var(--teeth-size);
+  border: var(--border-size) solid black;
+  border-radius: 0 0 var(--teeth-radius) var(--teeth-radius);
+}
+
+.mouth::before {
+  left: calc(var(--mouth-width) / 2 - var(--teeth-size));
+}
+
+.mouth::after {
+  left: calc(var(--mouth-width) / 2);
+}

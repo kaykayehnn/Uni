@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <style>
+      input {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="register-form">
+      <h1>Регистрация</h1>
+      <label for="name">Име</label>
+      <input type="text" id="name" name="name" />
+      <label for="surname">Фамилия</label>
+      <input type="text" id="surname" name="surname" />
+      <label for="egn">ЕГН</label>
+      <input type="text" id="egn" name="egn" />
+      <label for="password">Парола</label>
+      <input type="password" id="password" name="password" />
+      <label for="address">Адрес</label>
+      <input type="text" id="address" name="address" />
+      <button type="submit">Изпрати</button>
+    </form>
+
+    <script>
+      document.getElementById("register-form").addEventListener("submit", (e) => {
+        var data = [...document.querySelectorAll("input")].map((el) => el.value);
+        alert(data.join("\n"));
+        return false;
+      });
+    </script>
+  </body>
+</html>

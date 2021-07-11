@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Validation</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 100px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" id="surname" />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" />
+      </div>
+
+      <div>
+        <label for="type">Type</label>
+        <select name="type" id="type">
+          <option value=""></option>
+          <option value="chocolate">Chocolate</option>
+          <option value="vanilla">Vanilla</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="comment">Comment</label>
+        <textarea name="comment" id="comment"></textarea>
+      </div>
+      <input onclick="return Validate()" type="submit" value="Submit" />
+    </form>
+    <script>
+      function Validate() {
+        var name = document.getElementById("name").value;
+        var surname = document.getElementById("surname").value;
+        var phone = document.getElementById("phone").value;
+        var type = document.getElementById("type").value;
+        var comment = document.getElementById("comment").value;
+
+        var errors = "";
+        if (name.length < 2) {
+          errors += "Invalid name\n";
+        }
+        if (surname.length < 2) {
+          errors += "Invalid surname\n";
+        }
+        if (!/^\d+$/.test(phone)) {
+          errors += "Invalid phone\n";
+        }
+        if (type === "") {
+          errors += "Invalid type\n";
+        }
+
+        if (errors !== "") {
+          alert(errors);
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

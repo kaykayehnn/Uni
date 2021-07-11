@@ -1,0 +1,173 @@
+body {
+  font-family: sans-serif;
+}
+
+.bottom-line {
+  margin: 0 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.heading {
+  margin: 8px 0 32px 32px;
+  font-weight: 400;
+}
+
+.menu-bar {
+  display: flex;
+}
+
+.search-form {
+  margin: 16px 16px 16px auto;
+  position: relative;
+}
+
+.search-form::after {
+  content: "🔎";
+  display: block;
+  color: black;
+  position: absolute;
+  right: 4px;
+  top: 1px;
+}
+
+.nav-item {
+  display: inline;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.blue-link,
+.blue-link:visited,
+.blue-link:active,
+.blue-link:hover {
+  color: #225e9b;
+}
+
+.inherit-link,
+.inherit-link:visited,
+.inherit-link:active,
+.inherit-link:hover {
+  color: inherit;
+}
+
+.nav-link {
+  color: #555;
+  padding: 16px 32px;
+}
+
+.nav-link:hover {
+  background-color: #eee;
+}
+
+.main-columns {
+  display: flex;
+  margin: 0 64px;
+}
+
+.articles-bottom-line {
+  margin: 24px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.side-nav-list {
+  margin-top: 64px;
+  min-width: 200px;
+  /* To remove whitespace in inline-block elements */
+  font-size: 0;
+}
+
+.side-nav-item {
+  margin-top: 8px;
+}
+
+.side-nav-link {
+  font-size: 1rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.extra {
+  color: #777;
+}
+
+.comment-link {
+  color: inherit;
+  text-decoration-color: #bbb;
+}
+
+.continue-reading::after {
+  content: "→";
+  margin-left: 8px;
+}
+
+.previous-entries {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.previous-entries::before {
+  content: "←";
+  margin-right: 8px;
+}
+
+.aside {
+  min-width: 180px;
+  padding: 32px 0 0;
+}
+
+.aside-section {
+  color: #555;
+  border-bottom: 1px solid #ddd;
+}
+
+.language-select {
+  margin: 12px 0 24px;
+}
+
+.twitter-reminder {
+  background: #f7f7f7;
+  padding: 20px 0 20px 48px;
+  color: #444;
+}
+
+.twitter-reminder::before {
+  content: "🐦";
+  margin-right: 4px;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  display: flex;
+  padding: 24px;
+  font-size: 1em;
+}
+
+.latest-title {
+  color: #fff;
+}
+
+.latest-excerpt {
+  font-size: 0.9em;
+}
+
+.gray {
+  color: #aaa;
+}
+
+.white {
+  color: #fff;
+}
+
+.column {
+  flex: 1 1 0;
+  margin: 0 16px;
+}
+
+.footer-heading {
+  font-size: 1.5em;
+}

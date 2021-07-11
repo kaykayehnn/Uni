@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadacha 1</title>
+    <style>
+      table,
+      td,
+      th,
+      tr {
+        border: 1px solid black;
+      }
+
+      .horizontal-center {
+        text-align: center;
+      }
+
+      .horizontal-right {
+        text-align: right;
+      }
+
+      .vertical-bottom {
+        vertical-align: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th colspan="3">Title goes here</th>
+        <td class="horizontal-center">A</td>
+        <td class="horizontal-right">B</td>
+      </tr>
+      <tr>
+        <td rowspan="3">C</td>
+        <td class="horizontal-center">D</td>
+        <td class="horizontal-center">E</td>
+        <td class="horizontal-center">F</td>
+        <td class="horizontal-right">G</td>
+      </tr>
+      <tr>
+        <td class="horizontal-center">H</td>
+        <td class="horizontal-center" colspan="2">I</td>
+        <td class="vertical-bottom horizontal-right" rowspan="2">J</td>
+      </tr>
+      <tr>
+        <td class="horizontal-center">K</td>
+        <td class="horizontal-center">L</td>
+        <td class="horizontal-center">M</td>
+      </tr>
+      <tr>
+        <td class="horizontal-right">N</td>
+        <td class="horizontal-center" colspan="4">O</td>
+      </tr>
+    </table>
+  </body>
+</html>

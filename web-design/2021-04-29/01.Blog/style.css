@@ -1,0 +1,183 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Verdana";
+}
+
+header {
+  font-family: "Nunito";
+}
+
+footer {
+  font-family: "Cambria";
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #fbbe61;
+}
+
+.heading {
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #fefefe;
+  margin: 0;
+  padding: 24px 16px;
+}
+
+.menu-bar {
+  display: flex;
+  background: #40312a;
+  color: #fefefe;
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.navigation {
+  font-size: 16px;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 4px 8px;
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.search-label {
+  text-transform: uppercase;
+}
+
+.search-input {
+  background: #2c8897;
+  margin: 0 8px;
+  border: none;
+}
+
+.main {
+  background: #f7eedf;
+  /* padding: 0 16px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articles {
+  flex: 1 0 600px;
+}
+
+.articles,
+.side-menu {
+  padding: 0 16px;
+}
+
+.article {
+  padding-right: 24px;
+}
+
+.article-title {
+  font-family: "Nunito";
+  font-size: 22px;
+}
+
+.article-subtitle {
+  font-family: "Cambria";
+  font-size: 10px;
+  color: #c3a77d;
+  margin-bottom: 16px;
+}
+
+.splitter::after {
+  content: "|";
+}
+
+.side-menu {
+  flex: 1 0 300px;
+  background: #eddec7;
+}
+
+.who-we-are {
+  text-transform: uppercase;
+  color: #2a8b9a;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.archives {
+  background: #2a8b9a;
+  padding: 16px;
+}
+
+.archives-title {
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+
+.archive-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 0;
+}
+
+.archive-link-container {
+  border-top: 1px solid #5abbca;
+}
+
+.title {
+  font-family: "Cambria";
+  text-transform: uppercase;
+  color: #2c8897;
+  margin: 0;
+  padding: 16px 0;
+}
+
+.article-image {
+  width: 100%;
+  padding: 0;
+}
+
+.figure {
+  margin: 0;
+  position: relative;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.continue-link {
+  color: #2c8897;
+  text-decoration: none;
+}
+
+.footer {
+  background: #2c8897;
+  color: #fff;
+  padding: 32px;
+}

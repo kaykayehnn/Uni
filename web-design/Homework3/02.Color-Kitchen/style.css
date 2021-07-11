@@ -1,0 +1,152 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background: url(./colorful_dots_on_black.jpg);
+  font-family: sans-serif;
+}
+
+/* For some reason there are a lot of headers ¯\_(ツ)_/¯ */
+body > header {
+  color: #ffff00;
+  margin-bottom: 32px;
+  background: linear-gradient(to right, #ff0000, #ff0000 33%, #008000 33%, #008000 66%, #0000ff 66%);
+  font-size: calc(0.45em + 2vw);
+  padding: 8px 0 24px;
+  font-weight: bold;
+  text-align: center;
+  flex: 0 0 100%;
+}
+
+.transparent,
+aside,
+article {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+}
+
+aside {
+  flex: 0 1 260px;
+  margin: 0 32px 32px 16px;
+}
+
+aside header {
+  font-size: 1.25em;
+  text-decoration: underline;
+  margin: 16px;
+}
+
+aside nav ul {
+  list-style-type: "✅";
+  padding-left: 24px;
+  list-style-position: inside;
+}
+
+/* Spacing between bullet and link text */
+nav li::before {
+  content: "";
+  margin-left: 12px;
+}
+
+nav li {
+  padding: 8px;
+  margin-right: 16px;
+  border-radius: 8px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: #8f8789;
+}
+
+nav li:nth-child(1):hover {
+  background: #ff0000;
+}
+
+nav li:nth-child(2):hover {
+  background: #ffa500;
+}
+
+nav li:nth-child(3):hover {
+  background: #ffff00;
+}
+
+nav li:nth-child(4):hover {
+  background: #008000;
+}
+
+nav li:nth-child(5):hover {
+  background: #0000ff;
+}
+
+nav li:nth-child(6):hover {
+  background: #800080;
+}
+
+body > section {
+  flex: 1 1;
+  margin-right: 24px;
+}
+
+article {
+  min-width: 280px;
+  padding: 16px;
+  margin-left: 16px;
+  margin-bottom: 12px;
+}
+
+article header {
+  margin-bottom: 16px;
+  padding: 16px;
+  font-size: 1.5em;
+  border-radius: 8px;
+}
+
+article div::first-letter {
+  font-size: 4em;
+}
+
+article div::first-line {
+  font-style: italic;
+}
+
+article footer {
+  margin-top: 12px;
+}
+
+article footer a {
+  color: #8f8789;
+  font-style: italic;
+}
+
+#webColors {
+  background: #ff0000;
+  color: #ffffff;
+}
+
+#webSafeColors {
+  background: #ffa500;
+}
+
+#RGB {
+  background: #ffff00;
+}
+
+#RGBA {
+  background: #008000;
+  color: #ffffff;
+}
+
+[id="#HSLHSV"] {
+  background: #0000ff;
+  color: #ffffff;
+}
+
+[id="#lorem"] {
+  background: #800080;
+  color: #ffffff;
+}

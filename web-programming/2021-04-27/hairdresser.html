@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hairdresser</title>
+    <style>
+      form {
+        padding: 20px;
+      }
+
+      .block {
+        display: block;
+      }
+
+      .flex {
+        display: flex;
+        border: 1px solid black;
+        justify-content: center;
+      }
+      input,
+      textarea {
+        margin: 8px 0;
+      }
+      img {
+        margin: auto 0;
+        height: 360px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Час при фризьор</h3>
+    <div class="flex">
+      <form action="#" enctype="multipart/form-data" method="POST">
+        <div>
+          <label class="block" for="name">Име</label>
+          <input type="text" id="name" name="name" placeholder="Име" />
+        </div>
+        <div>
+          <label class="block" for="surname">Фамилия</label>
+          <input type="text" id="surname" name="surname" placeholder="Фамилия" />
+        </div>
+        <div>
+          <label class="block" for="egn">ЕГН</label>
+          <input type="password" id="egn" name="egn" placeholder="ЕГН" />
+        </div>
+        <div>
+          <div>Час</div>
+          <div>
+            <input type="radio" id="1300" name="time" value="1300" />
+            <label for="1300">13:00</label>
+            <input type="radio" id="1330" name="time" value="1330" />
+            <label for="1330">13:30</label>
+          </div>
+          <input type="radio" id="time" name="time" value="1500" />
+          <label for="1500">15:00</label>
+          <input type="radio" id="time" name="time" value="1600" />
+          <label for="1600">16:00</label>
+        </div>
+        <div>
+          <label for="style">Визия</label>
+          <input type="file" name="style" id="style" />
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

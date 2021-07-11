@@ -1,0 +1,72 @@
+body {
+  --blue: #234465;
+
+  background: #eeeeee;
+  font-family: sans-serif;
+}
+
+.heading {
+  color: var(--blue);
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex: 1 0 0;
+  padding: 20px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 12px 4px;
+  margin: 20px 0;
+}
+
+.form-submit-button {
+  display: block;
+  margin-left: auto;
+  background: none;
+  border: 2px solid black;
+  font-size: 1.25em;
+  padding: 8px 48px;
+}
+
+.register-button {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.blue-form {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.white {
+  color: #fff;
+}
+
+.login-button {
+  color: #fff;
+  border-color: #ff9c00;
+}
+
+.forgot-password {
+  display: block;
+  margin: 8px 0;
+  color: #fff;
+  text-align: right;
+  font-weight: bold;
+}

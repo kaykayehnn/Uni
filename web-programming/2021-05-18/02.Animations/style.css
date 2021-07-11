@@ -1,0 +1,34 @@
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  display: flex;
+}
+
+.cogwheel {
+  width: 50%;
+  animation: spin 5s linear infinite;
+}
+
+.cogwheel-right-container {
+  width: 50%;
+  transform: rotate(20deg) translateX(-30px);
+}
+
+.cogwheel-right {
+  width: 100%;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

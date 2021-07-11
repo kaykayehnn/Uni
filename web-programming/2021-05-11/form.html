@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="pink">
+    <header>
+      <h1>Форма</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Начало</a></li>
+          <li><a href="grades.html">Оценки</a></li>
+          <li><a href="form.html">Форма</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="" method="POST">
+        <div class="flex-form">
+          <div class="column">
+            <div>
+              <label class="form-label" for="name">Име</label>
+              <input type="text" form="name" id="name" />
+            </div>
+            <div>
+              <label class="form-label" for="surname">Фамилия</label>
+              <input type="text" form="surname" id="surname" />
+            </div>
+            <div>
+              <label class="form-label" for="faculty">Факултетен номер</label>
+              <input type="number" form="faculty" id="faculty" />
+            </div>
+            <div>
+              <label class="form-label" for="edgn">ЕГН</label>
+              <input type="password" form="edgn" id="edgn" />
+            </div>
+            <div>
+              <input class="submit-button" type="submit" value="Изпрати" />
+            </div>
+          </div>
+          <div>
+            <div>
+              <label class="form-label" for="email">Email</label>
+              <input type="email" form="email" id="email" />
+            </div>
+            <div>
+              <label class="form-label" for="gpa">Среден успех на студента до момента</label>
+              <input type="number" form="gpa" id="gpa" />
+            </div>
+            <div>
+              <label class="form-label" for="address">Адрес на регистрация</label>
+              <input type="text" form="address" id="address" />
+            </div>
+            <div>
+              <label class="form-label" for="gender">Пол</label>
+              <select name="gender" id="gender">
+                <option value="male">Мъж</option>
+                <option value="female">Жена</option>
+                <option value="female">Apache хеликоптер</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

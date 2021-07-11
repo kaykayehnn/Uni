@@ -1,0 +1,159 @@
+body {
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 12px;
+  background: #50247d;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  background: url("./images/orion-gas-and-star-bgr.jpg");
+  color: #fff;
+  border-bottom: 8px solid #37a3d3;
+}
+
+.heading,
+.subtitle {
+  text-align: center;
+}
+
+.heading {
+  margin: 0;
+  font-size: 68px;
+  padding: 16px 0 0;
+  font-family: "Oleo Script";
+}
+
+.subtitle {
+  font-size: 26px;
+  transform: translateY(-24px);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+
+.nav-link {
+  margin: 0 8px;
+  padding: 8px 16px;
+  background: #fff;
+  color: #50247d;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  background: #36a4d5;
+  color: #fff;
+}
+
+.main {
+  display: flex;
+  background: #eae7ee;
+  padding: 32px;
+  margin: 32px 0;
+  border-top: 8px solid #865ab3;
+  border-bottom: 8px solid #37a3d3;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1 1 0;
+}
+
+.article {
+  background: #fff;
+  position: relative;
+}
+
+.article-title {
+  font-family: "Oleo Script";
+  margin: 0;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.article-subtitle {
+  font-size: 26px;
+}
+
+.main-article {
+  margin: 0 32px;
+  min-width: 400px;
+}
+
+.article-content {
+  padding: 32px;
+}
+
+.quote {
+  font-family: "Oleo Script";
+}
+
+.bottom-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #865ab3;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.bottom-link:hover {
+  background: #50247d;
+}
+
+.read-more {
+  position: absolute;
+  text-transform: uppercase;
+  background: #36a4d5;
+  padding: 6px 12px;
+  top: 0;
+  right: 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.right-container {
+  display: flex;
+}
+
+.side-article {
+  margin: 0 16px 16px;
+  min-width: 200px;
+}
+
+.side-article-image {
+  width: 100%;
+}
+
+.side-article-container {
+  margin: 8px 16px 0;
+}
+
+.side-article-title {
+  color: #36a4d5;
+  margin: 0;
+}
+
+.side-article-excerpt {
+  margin: 0;
+  padding: 4px 0 16px;
+}
+
+.footer {
+  color: #fff;
+  margin-left: 16px;
+  font-weight: bold;
+}

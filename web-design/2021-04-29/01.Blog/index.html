@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="heading">Sitename</h1>
+        <div class="flex menu-bar">
+          <nav>
+            <ul class="navigation">
+              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <form class="search-form" action="#search">
+            <label class="search-label" for="search">Search</label>
+            <input class="search-input" type="search" name="search" id="search" />
+            <span>&#128269;</span>
+          </form>
+        </div>
+      </header>
+      <main class="main">
+        <div class="articles">
+          <h1 class="title">From the blog</h1>
+          <article class="article">
+            <h2 class="article-title">Blog Post Name Here</h2>
+            <div class="article-subtitle">
+              <b>January 1st 2015 <span class="splitter"></span> 7 comments</b>
+            </div>
+            <figure class="figure">
+              <img src="./images/article-pic-01.png" alt="" class="article-image" />
+              <figcaption class="image-caption">Figure Caption</figcaption>
+            </figure>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus aspernatur dicta alias atque enim
+              deleniti, quisquam consequatur nostrum quibusdam inventore possimus at voluptates aliquam, dignissimos
+              quaerat ut sequi iste nam.
+              <a class="continue-link" href="#continue">Continue Reading...</a>
+            </p>
+          </article>
+
+          <article class="article">
+            <h2 class="article-title">Blog Post Name Here</h2>
+            <div class="article-subtitle">
+              <b>January 1st 2015 <span class="splitter"></span> 7 comments</b>
+            </div>
+            <figure class="figure">
+              <img src="./images/article-pic-02.png" alt="" class="article-image" />
+              <figcaption class="image-caption">Figure Caption</figcaption>
+            </figure>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus aspernatur dicta alias atque enim
+              deleniti, quisquam consequatur nostrum quibusdam inventore possimus at voluptates aliquam, dignissimos
+              quaerat ut sequi iste nam.
+              <a class="continue-link" href="#continue">Continue Reading...</a>
+            </p>
+          </article>
+        </div>
+        <aside class="side-menu">
+          <div class="archives">
+            <div class="archives-title">Archives</div>
+            <div class="archive-link-container">
+              <a class="archive-link" href="#">Lorem ipsum dolor sit amet.</a>
+            </div>
+            <div class="archive-link-container"><a class="archive-link" href="#">Lorem ipsum dolor sit amet.</a></div>
+            <div class="archive-link-container"><a class="archive-link" href="#">Lorem ipsum dolor sit amet.</a></div>
+          </div>
+          <div class="who-we-are">Who we are</div>
+          <img src="./images/pic3-WhoWeAre.jpg" alt="" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, assumenda.
+            <a href="#" class="continue-link">Read More!</a>
+          </p>
+        </aside>
+      </main>
+      <footer class="footer">&#169; All Copyrights Reserved | WebsiteName</footer>
+    </div>
+  </body>
+</html>

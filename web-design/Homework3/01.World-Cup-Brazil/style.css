@@ -1,0 +1,169 @@
+body {
+  font-family: sans-serif;
+  background: #009744;
+}
+
+.container {
+  padding: 32px;
+}
+
+/*
+  Further references for rounded-corner tables:
+
+  https://stackoverflow.com/questions/628301/css3s-border-radius-property-and-border-collapsecollapse-dont-mix-how-can-i 
+  https://stackoverflow.com/questions/4932181/rounded-table-corners-css-only
+  */
+.bordered-table {
+  --border: 3px solid black;
+  --border-radius: 24px;
+  border-radius: var(--border-radius);
+  border-spacing: 0;
+}
+
+.bordered-table td,
+.bordered-table th {
+  border-left: var(--border);
+  border-top: var(--border);
+}
+
+.bordered-table tr:first-child > :first-child {
+  border: var(--border);
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: var(--border-radius);
+}
+
+.bordered-table tr:first-child > :last-child {
+  border: var(--border);
+  border-bottom: none;
+  border-top-right-radius: var(--border-radius);
+}
+
+.bordered-table tr:last-child > :first-child {
+  border: var(--border);
+  border-right: none;
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.bordered-table tr:last-child > :last-child {
+  border: var(--border);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.bordered-table tr:last-child td {
+  border-bottom: var(--border);
+}
+.bordered-table tr :last-child {
+  border-right: var(--border);
+}
+
+.country-column {
+  min-width: 180px;
+  padding: 8px;
+}
+
+.country-cell {
+  min-width: 150px;
+  padding: 8px;
+}
+
+.table-header th {
+  background: #f8ca14;
+  font-size: 1.5em;
+  padding: 8px;
+}
+
+.table-entry:nth-child(odd) td {
+  background: #cbcbcb;
+}
+
+.table-entry:nth-child(even) td {
+  background: #ffffff;
+}
+
+.country::before,
+.country::after {
+  margin: 4px;
+}
+
+.result-big {
+  font-size: 1.5em;
+  padding: 8px 24px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.bet-button {
+  --width: 50px;
+  border: 2px solid black;
+  border-top-color: white;
+  border-left-color: white;
+  margin: 8px;
+  /* These 3 values need to stay in sync */
+  border-radius: var(--width);
+  width: var(--width);
+  height: var(--width);
+  /* Remove default button padding to center text properly */
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bet-red {
+  background: #ff0000;
+}
+
+.bet-green {
+  background: #008600;
+}
+
+.brasil-after::after {
+  content: url("https://flagcdn.com/w20/br.jpg");
+}
+
+.mexico-before::before {
+  content: url("https://flagcdn.com/w20/mx.jpg");
+}
+
+.spain-after::after {
+  content: url("https://flagcdn.com/w20/es.jpg");
+}
+
+.netherlands-before::before {
+  content: url("https://flagcdn.com/w20/nl.jpg");
+}
+
+.italy-after::after {
+  content: url("https://flagcdn.com/w20/it.jpg");
+}
+
+.england-before::before {
+  content: url("https://flagcdn.com/w20/gb-eng.jpg");
+}
+
+.argentina-after::after {
+  content: url("https://flagcdn.com/w20/ar.jpg");
+}
+
+.bosnia-before::before {
+  content: url("https://flagcdn.com/w20/ba.jpg");
+}
+
+.germany-after::after {
+  content: url("https://flagcdn.com/w20/de.jpg");
+}
+
+.portugal-before::before {
+  content: url("https://flagcdn.com/w20/pt.jpg");
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .calculator {
+        max-width: 250px;
+        border: 1px solid black;
+        font-size: 1.5em;
+      }
+
+      .results {
+        padding: 8px 0;
+        text-align: right;
+      }
+
+      .button-line {
+        display: flex;
+      }
+
+      .button {
+        width: 25%;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="results">&nbsp;</div>
+      <div class="button-line">
+        <button class="button button-number">1</button>
+        <button class="button button-number">2</button>
+        <button class="button button-number">3</button>
+        <button class="button button-operator">+</button>
+      </div>
+      <div class="button-line">
+        <button class="button button-number">4</button>
+        <button class="button button-number">5</button>
+        <button class="button button-number">6</button>
+        <button class="button button-operator">-</button>
+      </div>
+      <div class="button-line">
+        <button class="button button-number">7</button>
+        <button class="button button-number">8</button>
+        <button class="button button-number">9</button>
+        <button class="button button-operator">*</button>
+      </div>
+      <div class="button-line">
+        <button class="button button-clear">C</button>
+        <button class="button button-number">0</button>
+        <button class="button button-equals">=</button>
+        <button class="button button-operator">/</button>
+      </div>
+    </div>
+    <script>
+      let results = document.querySelector(".results");
+
+      document.querySelectorAll(".button-number, .button-operator").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          results.textContent += event.target.textContent;
+        });
+      });
+
+      document.querySelector(".button-clear").addEventListener("click", (event) => {
+        // Non-breakable space is used to preserve height
+        results.textContent = "\xa0";
+      });
+
+      document.querySelector(".button-equals").addEventListener("click", (event) => {
+        try {
+          let expression = results.textContent;
+
+          let result = eval(expression);
+
+          results.textContent = `${expression}=${result}`;
+        } catch (ex) {
+          results.textContent = ex.message;
+        }
+      });
+    </script>
+  </body>
+</html>
