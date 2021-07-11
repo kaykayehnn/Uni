@@ -1,0 +1,10 @@
+[Unit]
+Description=Live-server for university folder
+# Link this in /etc/systemd/system/
+
+[Service]
+Type=simple
+ExecStart=/home/krasimir/.yarn/bin/live-server --no-browser "/home/krasimir/projects/uni"
+
+[Install]
+WantedBy=multi-user.target
