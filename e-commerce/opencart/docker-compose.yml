@@ -1,0 +1,51 @@
+# Copyright VMware, Inc.
+# SPDX-License-Identifier: APACHE-2.0
+
+networks:
+  proxy:
+    external: true
+  internal:
+    internal: true
+  # Opencart requires network access for something maybe?
+  gateway:
+
+version: "2"
+services:
+  mariadb:
+    image: mariadb:10.4
+    command: --transaction-isolation=READ-COMMITTED --log-bin=mysqld-bin --binlog-format=ROW
+    networks:
+      - internal
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=true
+      - MYSQL_PASSWORD=hunter2
+      - MYSQL_DATABASE=bitnami_opencart
+      - MYSQL_USER=bn_opencart
+    volumes:
+      - ./db:/var/lib/mysql
+    restart: unless-stopped
+
+  opencart:
+    image: docker.io/bitnami/opencart:3
+    networks:
+      - internal
+      - proxy
+      - gateway
+    environment:
+      - OPENCART_HOST=opencart.homes
+      - OPENCART_DATABASE_HOST=mariadb
+      - OPENCART_DATABASE_PORT_NUMBER=3306
+      - OPENCART_DATABASE_USER=bn_opencart
+      - OPENCART_DATABASE_NAME=bitnami_opencart
+      - OPENCART_DATABASE_PASSWORD=hunter2
+    volumes:
+      - "./data:/bitnami/opencart"
+      - "./storage:/bitnami/opencart_storage/"
+      - "./openc:/opt/bitnami/opencart/"
+    depends_on:
+      - mariadb
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.opencart.loadbalancer.server.port=8080"
+      - "traefik.http.routers.opencart.rule=Host(`opencart.homes`)"
+      - "traefik.http.routers.opencart.entrypoints=web"
